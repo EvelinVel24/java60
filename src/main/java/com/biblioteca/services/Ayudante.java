@@ -1,6 +1,6 @@
 package main.java.com.biblioteca.services;
 
-import com.biblioteca.models.Libro;
+import main.java.com.biblioteca.models.Libro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -12,21 +12,21 @@ public class Ayudante implements IAyudante {
 
     @Override
     public List<Libro> buscarLibro(String frase) {
-        // Lógica para buscar libros
+        return biblioteca.buscarLibros(frase);
     }
 
     @Override
     public List<Libro> obtenerLibros() {
-        return biblioteca.getLibros();
+        return biblioteca.obtenerLibros();
     }
 
     @Override
     public void agregarLibro(Libro libro) {
-        biblioteca.getLibros().add(libro);
+        biblioteca.agregarLibro(libro);
     }
 
     @Override
     public Libro cambiarDisponibilidad(int id) {
-        // Lógica para cambiar disponibilidad
+        return biblioteca.cambiarDisponibilidad(id);
     }
 }

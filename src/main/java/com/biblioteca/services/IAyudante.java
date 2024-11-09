@@ -1,5 +1,6 @@
-package main.java.com.biblioteca.services; 
+package main.java.com.biblioteca.services;
 
+import main.java.com.biblioteca.models.Libro;
 import java.util.List;
 
 public interface IAyudante {
